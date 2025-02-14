@@ -1,0 +1,78 @@
+<!-- MidTerm Exam - DevOps Infrastructure Level 1 -->
+<!-- CCTB | Canadian College of Technology and Business -->
+<!-- Description: 
+    
+    H2O Challenge Web Application
+
+    Description: This web application helps users track their daily water intake with a goal of 2 liters.
+    The interface is divided into two panels:
+    - Left Panel: Displays the challenge title, goal, and a visual representation of the remaining water to be consumed.
+    - Right Panel: Allows users to select how many 250ml glasses of water they have drank.
+    
+    The app is designed to encourage healthy hydration habits in a simple and interactive way.
+
+    Instructor: Washington Valencia
+    Course: CCTB - DevOps Infrastructure Level 1
+    MidTerm Exam Project 
+
+    Note: This project is adapted from a public project. Original credits go to the respective author(s).
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CCTB - DevOps Infrastructure Level 1</title>
+</head>
+
+<body>
+  <h1 id="title">MidTerm Exam - DevOps Infrastructure Level 1</h1>
+
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <h2 id="challenge">H2O Challenge</h2>
+      <h3>Daily Target: 2 Liters</h3>
+      <div class="cup">
+        <div class="remained" id="remained">
+          <span id="liters">2L</span>
+          <small>Remained</small>
+        </div>
+        <div class="percentage" id="percentage"></div>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <p class="text">Stay Hydrated, Stay Healthy <br> Monitor Your Daily Water Goals!</p>
+      <div class="cups">
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+        <div class="cup cup-small">250 ml</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img
+        src="https://s3.us-east-2.amazonaws.com/4stay/landing_pages/logos/000/007/562/original/CCTB_logo_1_RGB.png?1614205756"
+        alt="CCTB Logo" class="footer-logo" />
+      <p>Instructor: <strong>Washington Valencia</strong> | <strong>Canadian College of Technology and Business
+          (CCTB)</strong></p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

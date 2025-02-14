@@ -1,0 +1,189 @@
+/* 
+<!-- MidTerm Exam - DevOps Infrastructure Level 1 -->
+<!-- CCTB | Canadian College of Technology and Business -->
+<!-- Description: 
+    
+    H2O Challenge Web Application
+
+    Description: This web application helps users track their daily water intake with a goal of 2 liters.
+    The interface is divided into two panels:
+    - Left Panel: Displays the challenge title, goal, and a visual representation of the remaining water to be consumed.
+    - Right Panel: Allows users to select how many 250ml glasses of water they have drank.
+    
+    The app is designed to encourage healthy hydration habits in a simple and interactive way.
+
+    Instructor: Washington Valencia
+    Course: CCTB - DevOps Infrastructure Level 1
+    MidTerm Exam Project 
+
+    Note: This project is adapted from a public project. Original credits go to the respective author(s).
+-->
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+  --border-color: #e26169;
+  --fill-color: #84cd2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(86, 37, 92);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(10, 1, 35, 0.1);
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-panel {
+  border-right: 2px solid #ccc;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1 {
+  margin: 10px 0 0;
+  color: yellow;
+}
+
+h2 {
+  color: aqua;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 40px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+footer strong {
+  color: #2196f3;
+}
+
+
+.cup {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  color: var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 330px;
+  width: 150px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cup.cup-small {
+  height: 95px;
+  width: 50px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: #fff;
+}
+
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+
+}
+
+.remained {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+  color: purple;
+}
+
+.remained span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.remained small {
+  font-size: 12px;
+}
+
+.percentage {
+  background-color: var(--fill-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  height: 0;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+}
